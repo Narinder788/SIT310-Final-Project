@@ -13,18 +13,13 @@ int motorleftdir  = 8;
 
 void setup()
 {
-  // Initialize the reflectance sensors module
   Sensors.init();
 
-  // Wait for the user button to be pressed and released
   button.waitForButton();
 
-  // Turn on LED to indicate we are in calibration mode
   pinMode(13, OUTPUT);
   digitalWrite(13, HIGH);
 
-  // Wait 1 second and then begin automatic sensor calibration
-  // by rotating in place to sweep the sensors over the line
   delay(1000);
   int i = 0;
 
